@@ -5,8 +5,9 @@ import Sanitized from "../components/Sanitized/Sanitized";
 import styles from "../styles/Home.module.css";
 export default function Home() {
   return (
+    <>
+     <Navbar />
     <div className={styles.container}>
-      <Navbar />
       <Featured/>
       <Sanitized/>
       <Offers/>
@@ -14,5 +15,6 @@ export default function Home() {
       <HappyCust/>
       <Footer />
     </div>
+    </>
   );
 }
