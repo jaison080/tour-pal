@@ -43,7 +43,7 @@
   justify-content: center;
   align-items: center;
   height: 45px;
-  background-color: rgb(38, 133, 189);
+  background-color: rgb(212, 171, 36);
   color: white;
   font-weight: 600;
   font-size: 20px;
@@ -55,7 +55,7 @@
 }
 
 .search_btn:hover {
-  background-color: rgb(17, 87, 114);
+  background-color: rgb(114, 96, 17);
 }
 
 .contents {
@@ -83,7 +83,7 @@
   border-radius: 20px;
 }
 .loginbtn {
-  background-color: rgb(38, 133, 189);
+  background-color: rgb(212, 171, 36);
   margin-top: 2rem;
   width: 100px;
   height: 40px;
@@ -100,5 +100,5 @@
   font-size: 16px;
 }
 .loginbtn:hover {
-  background-color: rgb(17, 87, 114);
+  background-color: rgb(114, 96, 17);
 }

@@ -73,11 +73,7 @@ function Subscribe() {
                     Price : <b>{item.price}/-</b>
                   </div>
                   <Link href={item.link} target="_blank" rel="noreferrer">
-                    <div
-                      className={styles.bookbtn}
-                    >
-                      Subscribe Now
-                    </div>
+                    <div className={styles.bookbtn}>Subscribe Now</div>
                   </Link>
                 </div>
               </>

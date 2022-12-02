@@ -1,11 +1,12 @@
 import React from "react";
+import { Navbar } from "../components";
 import CustomTitle from "../utils/customTitle";
 
 function Companion() {
   return (
     <>
       <CustomTitle title={"Companion"} />
-      <div>Companion</div>
+      <Navbar />
     </>
   );
 }
