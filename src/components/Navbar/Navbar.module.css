@@ -48,6 +48,18 @@
     padding: 10px 0;
 }
 
+.loginbtn {
+    background-color: rgb(205, 232, 223);
+    padding: .5rem;
+    border: none;
+    outline: none;
+    margin-left: 1rem;
+    border-radius: .5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: max-content;
+}
+
 .nav a.current,
 .nav a:hover {
     color: #c0392b;

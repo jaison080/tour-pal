@@ -23,6 +23,9 @@ function Navbar() {
             <li>
               <a href="/">Contact</a>
             </li>
+            <li>
+              <button className={styles.loginbtn}>Login</button>
+            </li> 
           </ul>
         </div>
       </nav>
