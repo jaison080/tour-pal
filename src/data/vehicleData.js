@@ -5,7 +5,7 @@ import four from '../assets/vehicles/4.png'
 const vehicleData = [
   {
     id: 1,
-    name: "Camry",
+    name: "Toyota Camry",
     image: one,
     gear: "Manual",
     fuel: "Hybrid",
@@ -21,7 +21,7 @@ const vehicleData = [
     fuel: "Diesel",
     seats: "5",
     price: "900",
-    isSold: false,
+    isSold: true,
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ const vehicleData = [
     fuel: "Diesel",
     seats: "5",
     price: "1000",
-    isSold: false,
+    isSold: true,
   }
 ];
 export default vehicleData
