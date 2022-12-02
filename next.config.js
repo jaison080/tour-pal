@@ -3,4 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+module.exports = nextConfig&&{ images: { domains: ['lh3.googleusercontent.com'], formats: ['image/avif', 'image/webp'], }, }
+
+
