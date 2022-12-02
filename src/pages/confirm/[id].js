@@ -63,54 +63,54 @@ function Confirm() {
           <div className={styles.bottom_section}>
             <div className={styles.header}>Fare Details</div>
             <div className={styles.bottom_table}>
-              <div className={styles.card}>
+              <div className={styles.card_1}>
                 <h3 className={styles.table_head}>Base Fare</h3>
                 <div className={styles.table_data}>{data?.price}/-</div>
               </div>
-              <div className={styles.card}>
+              <div className={styles.card_1}>
                 <h3 className={styles.table_head}>
                   Doorstep Delivery and Pickup
                 </h3>
                 <div className={styles.table_data}>400/-</div>
               </div>
-              <div className={styles.card}>
+              <div className={styles.card_1}>
                 <h3 className={styles.table_head}>
                   Insurance and GST
                 </h3>
                 <div className={styles.table_data}>Included</div>
               </div>
-              <div className={styles.card}>
+              <div className={styles.card_1}>
                 <h3 className={styles.table_head}>
                   Refundable Security Deposit
                 </h3>
                 <div className={styles.table_data}>2000/-</div>
               </div>
               <hr/>
-              <div className={styles.card}>
+              <div className={styles.card_1}>
                 <h3 className={styles.table_head} style={{ color: "rgb(54, 156, 151)" }}>
                   Total
                 </h3>
                 <div className={styles.table_data}><b>6000/-</b></div>
               </div>
-              <div className={styles.card}>
+              <div className={styles.card_1}>
                 <h3 className={styles.table_head}>
                   Kms Limit
                 </h3>
                 <div className={styles.table_data}>2166 kms</div>
               </div>
-              <div className={styles.card}>
+              <div className={styles.card_1}>
                 <h3 className={styles.table_head}>
                   Fuel
                 </h3>
                 <div className={styles.table_data}>Excluded</div>
               </div>
-              <div className={styles.card}>
+              <div className={styles.card_1}>
                 <h3 className={styles.table_head}>
                   Extra kms Charge
                 </h3>
                 <div className={styles.table_data}>12/- per km</div>
               </div>
-              <div className={styles.card}>
+              <div className={styles.card_1}>
                 <h3 className={styles.table_head}>
                  Tolls,Parking and Inter-State Taxes
                 </h3>

@@ -2,9 +2,8 @@ import one from "../assets/food/1.jpg";
 import two from "../assets/food/2.jpg";
 import three from "../assets/food/3.jpg";
 import four from "../assets/food/4.jpg";
-import five from "../assets/food/5.jpg";
+import five from "../assets/food/5.webp";
 import six from "../assets/food/6.jpg";
-import seven from "../assets/food/7.jpg";
 const hotelData = [
   {
     id: 1,
@@ -47,13 +46,6 @@ const hotelData = [
     title: "Malabar Hotel",
     location: "Kozhikode",
     food: "Mutton biriyani",
-  },
-  {
-    id: 7,
-    img: seven,
-    title: "Paradise Hotel",
-    location: "Pala",
-    food: "Beef fry",
   }
 
 ];
