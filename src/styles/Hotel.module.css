@@ -106,3 +106,8 @@
 .loginbtn:hover {
   background-color: rgb(114, 96, 17);
 }
+.main_container
+{
+  padding-top: 2rem;
+  text-align: center;
+}

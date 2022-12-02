@@ -24,6 +24,7 @@ function Home() {
       <CustomTitle title={"Home"} />
       <Navbar />
       <div className={styles.main_container}>
+        <h1>Home</h1>
         <div className={styles.search}>
           <input
             onChange={(e) => {

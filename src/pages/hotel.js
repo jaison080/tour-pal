@@ -24,6 +24,7 @@ function Home() {
       <CustomTitle title={"Hotel"} />
       <Navbar />
       <div className={styles.main_container}>
+        <h1>Hotel</h1>
         <div className={styles.search}>
           <input
             onChange={(e) => {
