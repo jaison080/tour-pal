@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Companion() {
-  return (
-    <div>Companion</div>
-  )
+  return <div>Companion</div>;
 }
 
-export default Companion
+export default Companion;

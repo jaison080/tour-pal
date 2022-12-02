@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styles from "./Dining.module.css";
-import dining from "../../assets/dining.jpeg";
+import dining from "../../assets/vectors/dining.jpeg";
 import { useRouter } from "next/router";
 
 function Dining() {

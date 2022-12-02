@@ -1,50 +1,45 @@
-.peer_container
-{
-    background-color: #b5ece7;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 450px;
-    height: 370px;
-    padding: 2rem;
-    row-gap: 1rem;
-    border-radius: 20px;
+.peer_container {
+  background-color: #b5ece7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 450px;
+  height: 370px;
+  padding: 2rem;
+  row-gap: 1rem;
+  border-radius: 20px;
 }
-.buttons
-{
-    display: flex;
-    flex-direction: row;
-    column-gap: 3rem;
-    justify-content: center;
-    align-items: center;
+.buttons {
+  display: flex;
+  flex-direction: row;
+  column-gap: 3rem;
+  justify-content: center;
+  align-items: center;
 }
-.button
-{
-    background-color: #dd9551;
-    border-radius: 20px;
-    width: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    line-height: 1.33;
-    font-weight: 600;
-    color: white;
+.button {
+  background-color: #dd9551;
+  border-radius: 20px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1.33;
+  font-weight: 600;
+  color: white;
 }
-.button:hover{
-    background-color: #a56f3d;
+.button:hover {
+  background-color: #a56f3d;
 }
-.img img
-{
-    border-radius: 20px;
+.img img {
+  border-radius: 20px;
 }
 .content {
-    font-size: 26px;
-    line-height: 1.5;
-    font-weight: 600;
-    color: black;
-  }
-  
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: black;
+}

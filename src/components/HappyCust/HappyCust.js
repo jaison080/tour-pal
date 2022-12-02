@@ -7,7 +7,6 @@ import Image from "next/image";
 import left from "../../assets/icons/angleLeft.png";
 import right from "../../assets/icons/angleRight.png";
 
-
 function HappyCust() {
   const [swiperRef, setSwiperRef] = useState();
   const handleLeftClick = useCallback(() => {

@@ -31,8 +31,8 @@
   cursor: pointer;
   color: white;
 }
-.button:hover{
-    background-color: #a56f3d;
+.button:hover {
+  background-color: #a56f3d;
 }
 .img img {
   border-radius: 20px;
