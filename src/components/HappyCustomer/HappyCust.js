@@ -9,19 +9,20 @@ import right from "../../assets/icons/angleRight.png";
 
 
 function HappyCust() {
-  const [custData, setCustData] = useState();
-  // const handleLeftClick = useCallback(() => {
-  //   if (!custData) return custData.slidePrev();
-  // }, [custData]);
-  // const handleRightClick = useCallback(() => {
-  //   if (!custData) return custData.slideNext();
-  // }, [custData]);
+  const [swiperRef, setSwiperRef] = useState();
+  const handleLeftClick = useCallback(() => {
+    if (!swiperRef) return;
+    swiperRef.slidePrev();
+  }, [swiperRef]);
+  const handleRightClick = useCallback(() => {
+    if (!swiperRef) return;
+    swiperRef.slideNext();
+  }, [swiperRef]);
   return (
-    <div>
-      <h2>Happy customer</h2>
+    <div className={styles.sanitized_container}>
       <div className={styles.header}>
-        <div className={styles.heading}>Sanitized & safe cars</div>
-        {/* <div className={styles.arrows}>
+        <div className={styles.heading}>Customer Testimonials</div>
+        <div className={styles.arrows}>
           <Image
             src={left}
             alt="left"
@@ -38,13 +39,13 @@ function HappyCust() {
             style={{ cursor: "pointer" }}
             onClick={handleRightClick}
           />
-        </div> */}
+        </div>
       </div>
       <div className={styles.carousel}>
         <Swiper
           spaceBetween={30}
           className="mySwiper"
-          onSwiper={custData}
+          onSwiper={setSwiperRef}
           slidesPerView={1}
           breakpoints={{
             640: {

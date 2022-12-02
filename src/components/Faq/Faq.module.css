@@ -1,12 +1,26 @@
 .contianer {
-    width: 80%;
-    margin: auto;
-    background-color: rgb(251, 255, 255);
-    padding: 1rem;
+  background-color: rgb(251, 255, 255);
+  padding: 1rem;
+  display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    border-radius: 20px;
+
 }
 
 .heading {
-    width: 80%;
-    margin: auto;
-    padding: 1rem;
+    font-size: 26px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: rgba(152, 166, 179, 0.81);
+}
+.faq_container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.title {
+  font-size: 18px;
+  line-height: 1.33;
+  font-weight: 600;
 }
