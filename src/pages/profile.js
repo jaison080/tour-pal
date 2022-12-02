@@ -43,11 +43,19 @@ function Profile() {
             <div>Logout</div>
           </div>
           <div>My Bookings</div>
-          <div>
-            
+      
+            <div className={styles.right_section}>
+              <div className={styles.bottom_section}>
+                <div className={styles.header}>important point to remember</div>
+                <div className={styles.bottom_table}>
+                  <div className={styles.table_head}>changing bottom plan</div>
+                  <div className={styles.table_data}>changing bottom plan</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+  
     </>
   );
 }
