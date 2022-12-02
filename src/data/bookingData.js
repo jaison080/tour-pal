@@ -36,3 +36,4 @@ const bookingData = [
     status: "Pending",
   },
 ];
+export default bookingData;
