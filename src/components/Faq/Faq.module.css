@@ -2,17 +2,16 @@
   background-color: rgb(251, 255, 255);
   padding: 1rem;
   display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
-    border-radius: 20px;
-
+  flex-direction: column;
+  row-gap: 2rem;
+  border-radius: 20px;
 }
 
 .heading {
-    font-size: 26px;
-    line-height: 1.5;
-    font-weight: 600;
-    color: rgba(152, 166, 179, 0.81);
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: rgba(152, 166, 179, 0.81);
 }
 .faq_container {
   display: flex;

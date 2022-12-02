@@ -31,6 +31,11 @@ function peershare() {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam fugit id, est, doloremque voluptate magnam, ab autem reprehenderit porro cupiditate magni ipsa vero voluptates vel. Et iste veritatis in.</p>
           </div>
         </div>
+        <div className="carserction">
+          <div className="car_card">
+            
+          </div>
+        </div>
       </div>
     </div>
   );

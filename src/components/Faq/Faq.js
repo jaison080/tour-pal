@@ -10,7 +10,7 @@ function Faq() {
           return (
             <div key={index}>
               <div className={styles.title}>{item.question}</div>
-              <br/>
+              <br />
               <div className={styles.answer}>{item.answer}</div>
               <hr />
             </div>

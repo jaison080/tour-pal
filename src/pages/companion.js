@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import CustomTitle from "../utils/customTitle";
 
 function Companion() {
   return (
-    <div>Companion</div>
-  )
+    <>
+      <CustomTitle title={"Companion"} />
+      <div>Companion</div>
+    </>
+  );
 }
 
-export default Companion
+export default Companion;

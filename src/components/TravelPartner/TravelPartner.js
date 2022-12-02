@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styles from "./TravelPartner.module.css";
-import companion from "../../assets/companion.jpeg";
+import companion from "../../assets/vectors/companion.jpeg";
 import { useRouter } from "next/router";
 function TravelPartner() {
   const router = useRouter();

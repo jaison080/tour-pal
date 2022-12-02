@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import CustomTitle from "../utils/customTitle";
 
 function Home() {
   return (
-    <div>Home</div>
-  )
+    <>
+      <CustomTitle title={"Home"} />
+      <div>Home</div>
+    </>
+  );
 }
 
-export default Home
+export default Home;
