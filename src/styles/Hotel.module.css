@@ -73,7 +73,7 @@
 
 .items {
   display: flex;
-justify-content: space-between;
+  justify-content: space-between;
   padding: 1rem;
   border-radius: 20px;
   background-color: white;

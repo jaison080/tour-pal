@@ -1,12 +1,9 @@
 export { default as Navbar } from "./Navbar/Navbar";
-export { default as Footer } from "./Footer/Footer";
 export { default as Faq } from "./Faq/Faq";
 export { default as HappyCust } from "./HappyCust/HappyCust";
 export { default as Dining } from "./Dining/Dining";
 export { default as Featured } from "./Featured/Featured";
 export { default as Offers } from "./Offers/Offers";
-export { default as OurInvest } from "./OurInvest/OurInvest";
-export { default as OurJourney } from "./OurJourney/OurJourney";
 export { default as PeerCar } from "./PeerCar/PeerCar";
 export { default as Sanitized } from "./Sanitized/Sanitized";
 export { default as TravelPartner } from "./TravelPartner/TravelPartner";

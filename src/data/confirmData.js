@@ -23,6 +23,6 @@ const confirmData = [
     id: 5,
     title: "PRE-HANDOVER INSPECTION",
     desc: "Please inspect the car (including the fuel gauge and odometer) thoroughly before approving the checklist.",
-  }
+  },
 ];
-export default confirmData
+export default confirmData;

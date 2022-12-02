@@ -1,11 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import styles from "../../styles/Confirm.module.css";
-import car from "../../assets/vectors/car.jpg";
 import { useRouter } from "next/router";
-import vehicleData from "../../data/vehicleData";
 import { Navbar } from "../../components";
-import confirmData from "../../data/confirmdata";
+import { confirmData, vehicleData } from "../../data";
 function Confirm() {
   const router = useRouter();
   const { id } = router.query;
@@ -74,9 +72,7 @@ function Confirm() {
                 <div className={styles.table_data}>400/-</div>
               </div>
               <div className={styles.card_1}>
-                <h3 className={styles.table_head}>
-                  Insurance and GST
-                </h3>
+                <h3 className={styles.table_head}>Insurance and GST</h3>
                 <div className={styles.table_data}>Included</div>
               </div>
               <div className={styles.card_1}>
@@ -85,43 +81,47 @@ function Confirm() {
                 </h3>
                 <div className={styles.table_data}>2000/-</div>
               </div>
-              <hr/>
+              <hr />
               <div className={styles.card_1}>
-                <h3 className={styles.table_head} style={{ color: "rgb(54, 156, 151)" }}>
+                <h3
+                  className={styles.table_head}
+                  style={{ color: "rgb(54, 156, 151)" }}
+                >
                   Total
                 </h3>
-                <div className={styles.table_data}><b>6000/-</b></div>
+                <div className={styles.table_data}>
+                  <b>6000/-</b>
+                </div>
               </div>
               <div className={styles.card_1}>
-                <h3 className={styles.table_head}>
-                  Kms Limit
-                </h3>
+                <h3 className={styles.table_head}>Kms Limit</h3>
                 <div className={styles.table_data}>2166 kms</div>
               </div>
               <div className={styles.card_1}>
-                <h3 className={styles.table_head}>
-                  Fuel
-                </h3>
+                <h3 className={styles.table_head}>Fuel</h3>
                 <div className={styles.table_data}>Excluded</div>
               </div>
               <div className={styles.card_1}>
-                <h3 className={styles.table_head}>
-                  Extra kms Charge
-                </h3>
+                <h3 className={styles.table_head}>Extra kms Charge</h3>
                 <div className={styles.table_data}>12/- per km</div>
               </div>
               <div className={styles.card_1}>
                 <h3 className={styles.table_head}>
-                 Tolls,Parking and Inter-State Taxes
+                  Tolls,Parking and Inter-State Taxes
                 </h3>
                 <div className={styles.table_data}>To be Paid by you</div>
               </div>
-              <hr/>
+              <hr />
             </div>
           </div>
-          <div className={styles.loginbtn} onClick={()=>{
-            router.push('/complete')
-          }}>Confirm Booking</div>
+          <div
+            className={styles.loginbtn}
+            onClick={() => {
+              router.push("/complete");
+            }}
+          >
+            Confirm Booking
+          </div>
         </div>
       </div>
     </>

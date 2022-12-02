@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import styles from "../styles/Peershare.module.css";
-import vehicleData from "../data/vehicleData";
-import { Navbar } from "../components";
+import { Featured, Navbar, Offers, Sanitized, Why } from "../components";
 import { useRouter } from "next/router";
+import { vehicleData } from "../data";
 function Peershare() {
   const router = useRouter();
   const [query, setQuery] = useState("");
@@ -116,6 +116,10 @@ function Peershare() {
           })}
         </div>
       </div>
+      <Featured />
+      <Sanitized />
+      <Offers />
+      <Why />
     </div>
   );
 }

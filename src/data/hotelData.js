@@ -46,7 +46,6 @@ const hotelData = [
     title: "Malabar Hotel",
     location: "Kozhikode",
     food: "Mutton biriyani",
-  }
-
+  },
 ];
 export default hotelData;

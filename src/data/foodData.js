@@ -46,7 +46,6 @@ const foodData = [
     title: "Kaduvakunnel House",
     location: "Pala",
     food: "Beef fry",
-  }
-
+  },
 ];
 export default foodData;

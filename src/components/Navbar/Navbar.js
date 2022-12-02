@@ -19,14 +19,9 @@ function Navbar() {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/firebase.User
         const uid = user.uid;
         setSignedInUser(user);
-        // ...
       } else {
-        // User is signed out
-        // ...
       }
     });
   });
@@ -36,11 +31,8 @@ function Navbar() {
       .then(() => {
         router.push("/");
         window.location.reload();
-        // Sign-out successful.
       })
-      .catch((error) => {
-        // An error happened.
-      });
+      .catch((error) => {});
   }
   async function signInWithGoogle() {
     signInWithPopup(auth, provider)
@@ -48,23 +40,17 @@ function Navbar() {
         console.log(result);
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
-        // The signed-in user info.
         const user = result.user;
         console.log(user);
         return result;
       })
       .catch((error) => {
-        // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
-        // The email of the user's account used.
         const email = error.customData.email;
-        // The AuthCredential type that was used.
         const credential = GoogleAuthProvider.credentialFromError(error);
         return error;
-        // ...
       });
-    // Destructure login and logout function
   }
   return (
     <div>
