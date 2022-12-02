@@ -3,6 +3,7 @@ import styles from './Faq.module.css'
 function Faq() {
   return (
     <div>
+        <h1 className={styles.heading}>FAQ</h1>
       <div className={styles.contianer}>
         <div className="sections">
           <h2>Is there a speed limit?</h2>

@@ -10,6 +10,7 @@
     right: 0;
     top: 0;
     transition: all 0.3s ease-in-out;
+    z-index: 100;
 }
 
 .nav .container {
@@ -44,11 +45,11 @@
 }
 
 .nav.active .container {
-padding: 10px 0;
+    padding: 10px 0;
 }
 
 .nav a.current,
 .nav a:hover {
-color: #c0392b;
-font-weight: bold;
+    color: #c0392b;
+    font-weight: bold;
 }

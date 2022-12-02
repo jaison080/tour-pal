@@ -4,3 +4,9 @@
     background-color: rgb(251, 255, 255);
     padding: 1rem;
 }
+
+.heading {
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+}
