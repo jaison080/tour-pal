@@ -68,3 +68,14 @@
     display: flex;
     justify-content: space-around;
 }
+
+.row {
+    display: flex;
+    margin: 1rem;
+}
+
+.main_row {
+    margin: 3rem;
+    background-color: rgb(176, 186, 195);
+    padding: 1rem;
+}
