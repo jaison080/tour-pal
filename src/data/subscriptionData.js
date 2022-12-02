@@ -8,7 +8,7 @@ import seven from "../assets/vehicles/7.png";
 import eight from "../assets/vehicles/8.png";
 import nine from "../assets/vehicles/9.png";
 import ten from "../assets/vehicles/10.png";
-const vehicleData = [
+const subscriptionData = [
   {
     id: 1,
     name: "Toyota Camry",
@@ -16,8 +16,9 @@ const vehicleData = [
     gear: "Manual",
     fuel: "Hybrid",
     seats: "5",
-    price: "3000",
-    isSold: false,
+    time: "6",
+    price: "600000",
+    link: "https://www.toyotabharat.com/mobility-solutions/subscription.html",
   },
   {
     id: 2,
@@ -26,8 +27,9 @@ const vehicleData = [
     gear: "Manual",
     fuel: "Diesel",
     seats: "5",
-    price: "900",
-    isSold: true,
+    time: "6",
+    price: "50000",
+    link: "https://www.toyotabharat.com/mobility-solutions/subscription.html",
   },
   {
     id: 3,
@@ -36,8 +38,9 @@ const vehicleData = [
     gear: "Automatic",
     fuel: "Petrol",
     seats: "5",
-    price: "2000",
-    isSold: false,
+    time: "6",
+    price: "150000",
+    link: "https://www.toyotabharat.com/mobility-solutions/subscription.html",
   },
   {
     id: 4,
@@ -46,8 +49,9 @@ const vehicleData = [
     gear: "Automatic",
     fuel: "Diesel",
     seats: "5",
-    price: "1000",
-    isSold: true,
+    time: "6",
+    price: "80000",
+    link: "https://www.aldautomotive.in/popular-cars-on-lease/honda-city",
   },
   {
     id: 5,
@@ -56,8 +60,9 @@ const vehicleData = [
     gear: "Manual",
     fuel: "Diesel",
     seats: "5",
-    price: "2000",
-    isSold: false,
+    time: "6",
+    price: "100000",
+    link: "https://www.aldautomotive.in/popular-cars-on-lease/honda-city",
   },
   {
     id: 6,
@@ -66,18 +71,20 @@ const vehicleData = [
     gear: "Automatic",
     fuel: "Petrol",
     seats: "5",
-    price: "2000",
-    isSold: false,
+    time: "6",
+    price: "300000",
+    link: "https://www.aldautomotive.in/popular-cars-on-lease/honda-city",
   },
   {
     id: 7,
-    name: "Benz S-Class",
+    name: "Benz S-class",
     image: seven,
     gear: "Automatic",
     fuel: "Petrol",
     seats: "5",
-    price: "3000",
-    isSold: true,
+    time: "6",
+    price: "800000",
+    link: "https://www.mercedes-benz-mobility.com/en/",
   },
   {
     id: 8,
@@ -86,8 +93,9 @@ const vehicleData = [
     gear: "Automatic",
     fuel: "Petrol",
     seats: "5",
-    price: "3000",
-    isSold: true,
+    time: "6",
+    price: "600000",
+    link: "https://www.mercedes-benz-mobility.com/en/",
   },
   {
     id: 9,
@@ -96,8 +104,9 @@ const vehicleData = [
     gear: "Automatic",
     fuel: "Diesel",
     seats: "5",
-    price: "3000",
-    isSold: false,
+    time: "6",
+    price: "400000",
+    link: "https://www.wagonex.com/brand/audi",
   },
   {
     id: 10,
@@ -106,8 +115,9 @@ const vehicleData = [
     gear: "Automatic",
     fuel: "Petrol",
     seats: "5",
-    price: "3000",
-    isSold: true,
+    time: "6",
+    price: "700000",
+    link: "https://www.bmw.in/en/fastlane/bmw-financial-services-new/bmw-leasing.html",
   },
 ];
-export default vehicleData;
+export default subscriptionData;

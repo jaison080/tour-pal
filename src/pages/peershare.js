@@ -1,10 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import styles from "../styles/peershare.module.css";
-import car from "../assets/vectors/car.jpg";
+import styles from "../styles/Peershare.module.css";
 import vehicleData from "../data/vehicleData";
 import { Navbar } from "../components";
-function peershare() {
+import { useRouter } from "next/router";
+function Peershare() {
+  const router = useRouter();
   return (
     <div>
       <Navbar />
@@ -67,14 +68,20 @@ function peershare() {
                     No: of Seats : <b>{item.seats}</b>
                   </div>
                   <div>
-                    Price : <b>{item.price}</b> per 200km
+                    Price : <b>{item.price}/-</b> per 200km
                   </div>
                   {item.isSold ? (
                     <div className={styles.sold}>Sold Out</div>
                   ) : (
-                    <div className={styles.bookbtn}>Book Now</div>
+                    <div
+                      className={styles.bookbtn}
+                      onClick={() => {
+                        router.push(`/confirm/${item.id}`);
+                      }}
+                    >
+                      Book Now
+                    </div>
                   )}
-                  
                 </div>
               </>
             );
@@ -85,4 +92,4 @@ function peershare() {
   );
 }
 
-export default peershare;
+export default Peershare;
