@@ -73,29 +73,25 @@ function Navbar() {
           </h1>
           <ul>
             <li>
-              <a href="/" className={styles.current}>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/">About</a>
-            </li>
-            <li>
-              <a href="/">Services</a>
-            </li>
-            <li>
-              <a href="/">Contact</a>
-            </li>
-            <li>
               {signedInUser ? (
-                <div>
-                  <Image
-                    src={signedInUser.photoURL}
-                    alt=""
-                    width={40}
-                    height={40}
-                    style={{ borderRadius: "50%" }}
-                  />{" "}
+                <div className={styles.profile}>
+                  <li>
+                    <a href="/profile" className={styles.current}>
+                      My Profile
+                    </a>
+                  </li>
+                  <div>
+                    <Image
+                      src={signedInUser.photoURL}
+                      alt=""
+                      width={40}
+                      height={40}
+                      style={{ borderRadius: "50%" }}
+                    />{" "}
+                  </div>
+                  <div className={styles.loginbtn} onClick={signOutOfGoogle}>
+                    Logout
+                  </div>
                 </div>
               ) : (
                 <div className={styles.loginbtn} onClick={signInWithGoogle}>
@@ -103,11 +99,6 @@ function Navbar() {
                 </div>
               )}
             </li>
-            {signedInUser ? (
-              <div className={styles.loginbtn} onClick={signOutOfGoogle}>
-                Logout
-              </div>
-            ) : null}
           </ul>
         </div>
       </nav>

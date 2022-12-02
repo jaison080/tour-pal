@@ -62,7 +62,7 @@
 
 .bookbtn {
     padding: 1rem;
-    background-color: rgb(54, 156, 151);
+    background-color: rgb(221, 123, 66);
     color: white;
     font-weight: 600;
     font-size: 20px;
@@ -74,7 +74,7 @@
 }
 .bookbtn:hover
 {
-    background-color: rgb(34, 92, 89);
+    background-color:  rgb(156, 88, 48);
 }
 .search_btn {
     width: 130px;
@@ -82,7 +82,7 @@
     justify-content: center;
     align-items: center;
     height: 45px;
-    background-color: rgb(54, 156, 151);
+    background-color:  rgb(221, 123, 66);
     color: white;
     font-weight: 600;
     font-size: 20px;
@@ -94,26 +94,13 @@
 }
 .search_btn:hover
 {
-    background-color: rgb(34, 92, 89);
-}
-.sold
-{
-    font-weight: 600;
-    font-size: 20px;
-    color: rgb(117, 43, 43);
-    padding: 1rem;
-    font-weight: 600;
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    margin: 1rem;
+    background-color:  rgb(145, 80, 43);
 }
 .car_name
 {
     font-weight: 800;
     font-size: 20px;
-    color: rgb(42, 124, 120);
+    color:  rgb(221, 123, 66);
     font-weight: 600;
     font-size: 23px;
     border: none;
