@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect, useState } from "react";
-import styles from "./Featured.module.css";
+import styles from "./Why.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import featuredData from "../../data/featuredData";
 import Image from "next/image";
 import left from "../../assets/icons/angleLeft.png";
 import right from "../../assets/icons/angleRight.png";
-function Featured() {
+function Why() {
   const [swiperRef, setSwiperRef] = useState();
   const handleLeftClick = useCallback(() => {
     if (!swiperRef) return;
@@ -18,9 +18,9 @@ function Featured() {
   }, [swiperRef]);
   return (
     <>
-      <div className={styles.featured_container}>
+      <div className={styles.why_container}>
         <div className={styles.header}>
-          <div className={styles.heading}>Featured</div>
+          <div className={styles.heading}>Why TourPal ?</div>
           <div className={styles.arrows}>
             <Image
               src={left}
@@ -78,4 +78,4 @@ function Featured() {
   );
 }
 
-export default Featured;
+export default Why;

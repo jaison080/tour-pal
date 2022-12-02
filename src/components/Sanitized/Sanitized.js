@@ -1,12 +1,13 @@
-import React, { useCallback, useEffect, useState } from "react";
-import styles from "./Featured.module.css";
+import React, { useCallback, useState } from "react";
+import styles from "./Sanitized.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
-import featuredData from "../../data/featuredData";
 import Image from "next/image";
 import left from "../../assets/icons/angleLeft.png";
 import right from "../../assets/icons/angleRight.png";
-function Featured() {
+import safecarsData from "../../data/safecarsData";
+
+function Sanitized() {
   const [swiperRef, setSwiperRef] = useState();
   const handleLeftClick = useCallback(() => {
     if (!swiperRef) return;
@@ -18,9 +19,9 @@ function Featured() {
   }, [swiperRef]);
   return (
     <>
-      <div className={styles.featured_container}>
+      <div className={styles.sanitized_container}>
         <div className={styles.header}>
-          <div className={styles.heading}>Featured</div>
+          <div className={styles.heading}>Sanitized & safe cars</div>
           <div className={styles.arrows}>
             <Image
               src={left}
@@ -58,7 +59,7 @@ function Featured() {
               },
             }}
           >
-            {featuredData.map((x) => (
+            {safecarsData.map((x) => (
               <SwiperSlide key={x.id}>
                 <div key={x.id}>
                   <Image
@@ -78,4 +79,4 @@ function Featured() {
   );
 }
 
-export default Featured;
+export default Sanitized;
