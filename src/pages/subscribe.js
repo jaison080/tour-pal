@@ -3,6 +3,7 @@ import React from "react";
 import styles from "../styles/Subscribe.module.css";
 import { Navbar } from "../components";
 import subscriptionData from "../data/subscriptionData";
+import Link from "next/link";
 function Subscribe() {
   return (
     <div>
@@ -71,7 +72,13 @@ function Subscribe() {
                   <div>
                     Price : <b>{item.price}/-</b>
                   </div>
-                  <div className={styles.bookbtn}>Subscribe Now</div>
+                  <Link href={item.link} target="_blank" rel="noreferrer">
+                    <div
+                      className={styles.bookbtn}
+                    >
+                      Subscribe Now
+                    </div>
+                  </Link>
                 </div>
               </>
             );

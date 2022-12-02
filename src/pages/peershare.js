@@ -3,7 +3,9 @@ import React from "react";
 import styles from "../styles/Peershare.module.css";
 import vehicleData from "../data/vehicleData";
 import { Navbar } from "../components";
+import { useRouter } from "next/router";
 function Peershare() {
+  const router = useRouter();
   return (
     <div>
       <Navbar />
@@ -71,7 +73,14 @@ function Peershare() {
                   {item.isSold ? (
                     <div className={styles.sold}>Sold Out</div>
                   ) : (
-                    <div className={styles.bookbtn}>Book Now</div>
+                    <div
+                      className={styles.bookbtn}
+                      onClick={() => {
+                        router.push(`/confirm/${item.id}`);
+                      }}
+                    >
+                      Book Now
+                    </div>
                   )}
                 </div>
               </>
