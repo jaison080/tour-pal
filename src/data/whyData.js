@@ -7,27 +7,21 @@ const whyData=[
     {
         id:1,
         img:contact,
-        title:"Title",
-        desc:"Description"
+        title:"Home delivery & return",
+        desc:"On-time doorstep service, at your preferred location and time"
     },
     {
         id:2,
         img:home,
-        title:"Title",
-        desc:"Description"
+        title:"Flexible pricing plans",
+        desc:"Choose ‘Unlimited kms’ or ‘with fuel’ plans"
     },
     {
         id:3,
         img:maintained,
-        title:"Title",
-        desc:"Description"
+        title:"Well maintained cars",
+        desc:"Regular service & maintenance; Inspected before each trip"
     },
-    {
-        id:4,
-        img:price,
-        title:"Title",
-        desc:"Description"
-    },
-    
+  
 ]
 export default whyData
