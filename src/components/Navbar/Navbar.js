@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import {
   getAuth,
@@ -16,18 +16,21 @@ function Navbar() {
   const router = useRouter();
   const [signedInUser, setSignedInUser] = useState();
   const auth = getAuth(app);
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/firebase.User
-      const uid = user.uid;
-      setSignedInUser(user);
-      // ...
-    } else {
-      // User is signed out
-      // ...
-    }
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        const uid = user.uid;
+        setSignedInUser(user);
+        // ...
+      } else {
+        // User is signed out
+        // ...
+      }
+    });
   });
+
   async function signOutOfGoogle() {
     signOut(auth)
       .then(() => {
@@ -63,7 +66,6 @@ function Navbar() {
       });
     // Destructure login and logout function
   }
-
   return (
     <div>
       <nav className={styles.nav}>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Navbar } from "../components";
 import CustomTitle from "../utils/customTitle";
 
 function Companion() {
@@ -12,6 +13,7 @@ function Companion() {
           <div className="search">search</div>
         </div>
       </div>
+      <Navbar />
     </>
   );
 }

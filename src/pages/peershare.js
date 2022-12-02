@@ -1,17 +1,47 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/Peershare.module.css";
 import vehicleData from "../data/vehicleData";
 import { Navbar } from "../components";
+import { useRouter } from "next/router";
 function Peershare() {
+  const router = useRouter();
+  const [query, setQuery] = useState("");
+  const [searchResults, setSearchResults] = useState(vehicleData);
+  const handleSearch = (query) => {
+    if (query !== null) {
+      const modified = vehicleData.filter((item) =>
+        item.name.toLowerCase().includes(query.toLowerCase())
+      );
+      setSearchResults(modified);
+    } else {
+      setSearchResults(vehicleData);
+    }
+  };
   return (
     <div>
       <Navbar />
       <div className={styles.container}>
         <h1>Peer Share</h1>
         <div className={styles.search}>
-          <input type="text" name="search" placeholder="Enter your Need" />
-          <div className={styles.search_btn}>Search</div>
+          <input
+            type="text"
+            name="search"
+            placeholder="Enter your Need"
+            value={query}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              console.log(query);
+            }}
+          />
+          <div
+            className={styles.search_btn}
+            onClick={() => {
+              handleSearch(query);
+            }}
+          >
+            Search
+          </div>
         </div>
         <h1>Our Uniqueness</h1>
         <div className={styles.unique}>
@@ -50,7 +80,7 @@ function Peershare() {
         </div>
         <h1>Cars Available</h1>
         <div className={styles.carsection}>
-          {vehicleData.map((item) => {
+          {searchResults.map((item) => {
             return (
               <>
                 <div className={styles.car_card}>
@@ -71,7 +101,14 @@ function Peershare() {
                   {item.isSold ? (
                     <div className={styles.sold}>Sold Out</div>
                   ) : (
-                    <div className={styles.bookbtn}>Book Now</div>
+                    <div
+                      className={styles.bookbtn}
+                      onClick={() => {
+                        router.push(`/confirm/${item.id}`);
+                      }}
+                    >
+                      Book Now
+                    </div>
                   )}
                 </div>
               </>
