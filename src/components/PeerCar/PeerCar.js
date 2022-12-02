@@ -2,8 +2,10 @@ import Image from "next/image";
 import React from "react";
 import styles from "./PeerCar.module.css";
 import car from "../../assets/car.jpg";
+import { useRouter } from "next/router";
 
 function PeerCar() {
+  const router = useRouter();
   return (
     <>
       <div className={styles.peer_container}>
@@ -12,8 +14,18 @@ function PeerCar() {
           <Image src={car} alt="" />
         </div>
         <div className={styles.buttons}>
-          <div className={styles.button}>Peer Share</div>
-          <div className={styles.button}>Subscribe</div>
+          <div
+            className={styles.button}
+            onClick={() => {
+              router.push("/peershare");
+            }}
+          >
+            Peer Share
+          </div>
+          <div className={styles.button}
+           onClick={() => {
+            router.push("/subscribe");
+          }}>Subscribe</div>
         </div>
       </div>
     </>

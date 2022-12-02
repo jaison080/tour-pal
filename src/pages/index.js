@@ -17,13 +17,13 @@ export default function Home() {
           <Dining />
           <TravelPartner />
         </div>
-        <Featured />
+        {/* <Featured />
         <Sanitized />
         <Offers />
-        <Why />
-        <Faq />
+        <Why /> */}
         <HappyCust />
-        <Footer />
+        <Faq />
+        {/* <Footer /> */}
       </div>
     </>
   );
