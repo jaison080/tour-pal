@@ -43,7 +43,7 @@ function Why() {
         </div>
         <div className={styles.carousel}>
           <Swiper
-            spaceBetween={30}
+            spaceBetween={250}
             className="mySwiper"
             onSwiper={setSwiperRef}
             slidesPerView={1}
