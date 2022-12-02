@@ -1,3 +1,8 @@
+import contact from '../assets/whytourpal/contact.png'
+import home from '../assets/whytourpal/home.png'
+import maintained from '../assets/whytourpal/maintained.png'
+import price from '../assets/whytourpal/price.png'
+
 const whyData=[
     {
         id:1,

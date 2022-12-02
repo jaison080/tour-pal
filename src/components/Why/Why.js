@@ -1,11 +1,12 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useState } from "react";
 import styles from "./Why.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
-import featuredData from "../../data/featuredData";
 import Image from "next/image";
 import left from "../../assets/icons/angleLeft.png";
 import right from "../../assets/icons/angleRight.png";
+import WhyCard from "./WhyCard/WhyCard";
+import whyData from "../../data/whyData";
 function Why() {
   const [swiperRef, setSwiperRef] = useState();
   const handleLeftClick = useCallback(() => {
@@ -58,17 +59,9 @@ function Why() {
               },
             }}
           >
-            {featuredData.map((x) => (
+            {whyData.map((x) => (
               <SwiperSlide key={x.id}>
-                <div key={x.id}>
-                  <Image
-                    src={x.img}
-                    alt="featured"
-                    width={330}
-                    height={150}
-                    style={{ borderRadius: "20px" }}
-                  />
-                </div>
+                <WhyCard data={x} />
               </SwiperSlide>
             ))}
           </Swiper>
