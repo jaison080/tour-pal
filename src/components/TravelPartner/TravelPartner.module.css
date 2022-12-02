@@ -1,0 +1,40 @@
+.peer_container {
+  background-color: #b5ece7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  padding: 2rem;
+  row-gap: 1rem;
+  border-radius: 20px;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  column-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  background-color: #dd9551;
+  border-radius: 20px;
+  padding: 10px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1.33;
+  font-weight: 600;
+  color: white;
+}
+.img img {
+  border-radius: 20px;
+}
+.content {
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: black;
+}
