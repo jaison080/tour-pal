@@ -44,7 +44,6 @@ function Profile() {
               <h1 className={styles.header}>My Bookings</h1>
               <div className={styles.bottom_table}>
                 {bookingData.map((items) => {
-                  console.log(items);
                   return (
                     <>
                       <div className={styles.main_row} key={items.id}>
