@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 function CustomTitle({ title }) {
   return (
     <Helmet>
-      <title>Peer Car | {title}</title>
+      <title>Tour Pal | {title}</title>
     </Helmet>
   );
 }
