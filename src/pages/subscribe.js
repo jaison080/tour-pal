@@ -2,8 +2,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import styles from "../styles/Subscribe.module.css";
 import { Navbar } from "../components";
-import subscriptionData from "../data/subscriptionData";
 import Link from "next/link";
+import { subscriptionData } from "../data";
 function Subscribe() {
   const [query, setQuery] = useState("");
   const [searchResults, setSearchResults] = useState(subscriptionData);
