@@ -1,0 +1,36 @@
+.container
+{
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.profile__logout {
+    background-color: rgb(54, 156, 151);
+    width: 90px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+  }
+  .profile__logout:hover {
+    background-color: rgb(34, 92, 89);
+  }
+  
