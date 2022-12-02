@@ -119,7 +119,9 @@ function Confirm() {
               <hr/>
             </div>
           </div>
-          <div className={styles.loginbtn}>PROCEED</div>
+          <div className={styles.loginbtn} onClick={()=>{
+            router.push('/complete')
+          }}>Confirm Booking</div>
         </div>
       </div>
     </>
