@@ -1,5 +1,7 @@
+import Image from "next/image";
 import React from "react";
 import styles from "../styles/peershare.module.css";
+import car from '../assets/vectors/car.jpg'
 function peershare() {
   return (
     <div>
@@ -31,9 +33,20 @@ function peershare() {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam fugit id, est, doloremque voluptate magnam, ab autem reprehenderit porro cupiditate magni ipsa vero voluptates vel. Et iste veritatis in.</p>
           </div>
         </div>
-        <div className="carserction">
-          <div className="car_card">
-            
+        <div className={styles.carsection}>
+          <div className={styles.car_card}>
+            <Image className={styles.images} src={car} alt="" />
+            <div>petrol</div>
+            <div>details</div>
+            <div>per day/rate</div>
+            <button className={styles.bookbtn}>book now</button>
+          </div>
+          <div className={styles.car_card}>
+            <Image className={styles.images} src={car} alt="" />
+            <div>petrol</div>
+            <div>details</div>
+            <div>per day/rate</div>
+            <button className={styles.bookbtn}>book now</button>
           </div>
         </div>
       </div>
