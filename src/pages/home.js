@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomTitle from "../utils/customTitle";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import food from "../assets/vectors/car.jpg";
 import { Navbar } from "../components";
+import { useRouter } from "next/router";
 function Home() {
+  const router = useRouter();
+  
+ 
   return (
     <>
       <CustomTitle title={"Home"} />
-      <Navbar/>
+      <Navbar />
       <div className={styles.main_container}>
         <div className={styles.search}>
-          <input type="text" name="search" placeholder="Enter your Need" />
+          <input
+            type="text"
+            name="search"
+            placeholder="Enter your Need"
+           
+          />
           <div className={styles.search_btn}>Search</div>
         </div>
         <div className={styles.contents}>
@@ -21,11 +30,18 @@ function Home() {
               <Image src={food} width={200} alt="" />
               <div className={styles.details}>
                 <h2 style={{ color: "rgb(38, 133, 189)" }}>Fish Curry Meals</h2>
-                <h3 >Kudakkachira House</h3>
-                <h4 >Kolayad , Kannur</h4>
+                <h3>Kudakkachira House</h3>
+                <h4>Kolayad , Kannur</h4>
                 <br />
               </div>
-              <div className={styles.loginbtn}>Book Now</div>
+              <div
+                className={styles.loginbtn}
+                onClick={() => {
+                  router.push("/complete");
+                }}
+              >
+                Book Now
+              </div>
             </div>
           </div>
         </div>

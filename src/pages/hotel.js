@@ -4,7 +4,9 @@ import styles from "../styles/Hotel.module.css";
 import Image from "next/image";
 import food from "../assets/vectors/car.jpg";
 import { Navbar } from "../components";
+import { useRouter } from "next/router";
 function Home() {
+  const router=useRouter();
   return (
     <>
       <CustomTitle title={"Hotel"} />
@@ -25,7 +27,9 @@ function Home() {
                 <h4 >Bolgatty</h4>
                 <br />
               </div>
-              <div className={styles.loginbtn}>Book Now</div>
+              <div className={styles.loginbtn} onClick={()=>{
+                router.push('/complete')
+              }}>Book Now</div>
             </div>
           </div>
         </div>
