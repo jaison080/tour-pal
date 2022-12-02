@@ -1,7 +1,13 @@
 import React from "react";
+import CustomTitle from "../utils/customTitle";
 
 function Companion() {
-  return <div>Companion</div>;
+  return (
+    <>
+      <CustomTitle title={"Companion"} />
+      <div>Companion</div>
+    </>
+  );
 }
 
 export default Companion;

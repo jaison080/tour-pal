@@ -1,7 +1,13 @@
 import React from "react";
+import CustomTitle from "../utils/customTitle";
 
 function Subscribe() {
-  return <div>Subscribe</div>;
+  return (
+    <>
+      <CustomTitle title={"Subscribe"} />
+      <div>Subscribe</div>
+    </>
+  );
 }
 
 export default Subscribe;
