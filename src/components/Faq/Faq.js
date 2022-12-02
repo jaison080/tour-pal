@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Faq.module.css'
 function Faq() {
   return (
-    <div>
+    <div className={styles.faq_container}>
         <h1 className={styles.heading}>FAQ</h1>
       <div className={styles.contianer}>
         <div className="sections">
