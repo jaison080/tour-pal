@@ -1,4 +1,3 @@
-import CustomTitle from "../../utils/CustomTitle";
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/Confirm.module.css";
 import { useRouter } from "next/router";
@@ -6,6 +5,7 @@ import { Navbar } from "../../components";
 import { confirmData } from "../../data";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../utils/firebase";
+import CustomTitle from "../../utils/customTitle";
 
 function Confirm() {
   const router = useRouter();
@@ -28,7 +28,6 @@ function Confirm() {
   useEffect(() => {
     getCar(id);
   }, [id]);
-  console.log(car);
 
   if (!car) {
     return (
