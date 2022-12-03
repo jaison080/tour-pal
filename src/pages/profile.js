@@ -37,7 +37,6 @@ function Profile() {
           <div className={styles.profile__logout}>
             <div>Logout</div>
           </div>
-          <div>My Bookings</div>
 
           <div className={styles.right_section}>
             <div className={styles.bottom_section}>

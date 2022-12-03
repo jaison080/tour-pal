@@ -35,7 +35,7 @@ function Companion() {
           <div
             className={styles.search_btn}
             onClick={() => {
-              if (source === "" && destination === "") {
+              if (source === "" || destination === "") {
                 alert("Please select source and destination");
                 return setVisible(false);
               }
