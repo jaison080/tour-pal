@@ -1,4 +1,4 @@
-import Image from "next/image";
+import CustomTitle from "../utils/customTitle";
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/Confirm.module.css";
 import { useRouter } from "next/router";
@@ -31,11 +31,18 @@ function Confirm() {
   console.log(car);
 
   if (!car) {
-    return <h1>Loading</h1>;
+    return (
+      <>
+        <Navbar />
+        <CustomTitle title="Confirm" />
+        <h1>Loading</h1>
+      </>
+    );
   }
   return (
     <>
       <Navbar />
+      <CustomTitle title="Confirm" />
       <div className={styles.main_container}>
         <div className={styles.left_section}>
           <div className={styles.top_section}>
