@@ -24,16 +24,16 @@ function Peershare() {
   useEffect(() => {
     getCars();
     console.log(cars);
-  },[])
-  async function getCars(){
-    let temp=[]
+  }, []);
+  async function getCars() {
+    let temp = [];
     const querySnapshot = await getDocs(collection(db, "peercars"));
     querySnapshot.forEach((doc) => {
-      console.log(`${doc.id} => ${doc.data()}`);
-      temp.push(doc.data())
+      let data = doc.data();
+      data.id = doc.id;
+      temp.push(data);
     });
-    setCars(temp)
-    
+    setCars(temp);
   }
   return (
     <div>
@@ -101,7 +101,13 @@ function Peershare() {
             return (
               <>
                 <div className={styles.car_card}>
-                  <img className={styles.images} src={item.image} alt="" width={300} height={300}/>
+                  <img
+                    className={styles.images}
+                    src={item.image}
+                    alt=""
+                    width={300}
+                    height={300}
+                  />
                   <div className={styles.car_name}>{item.name}</div>
                   <div>
                     Fuel Type : <b>{item.fuel}</b>

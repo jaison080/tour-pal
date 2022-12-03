@@ -1,9 +1,11 @@
 import { addDoc, collection } from "firebase/firestore";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import style from "../styles/addcar.module.css";
 import { db } from "../utils/firebase";
 function addcar() {
   const [name, setName] = useState("");
+  const router = useRouter();
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
   const [fuel, setFuel] = useState("");
@@ -11,7 +13,7 @@ function addcar() {
   const [gear, setGear] = useState("");
   async function addcar() {
     try {
-      const docRef = await addDoc(collection(db, "peercars"), {
+      await addDoc(collection(db, "peercars"), {
         name: name,
         price: price,
         image: image,
@@ -19,10 +21,7 @@ function addcar() {
         seats: seats,
         gear: gear,
       });
-      console.log("Document written with ID: ", docRef.id);
-    } catch (e) {
-      console.error("Error adding document: ", e);
-    }
+    } catch (e) {}
   }
   return (
     <div className={style.maincontainer}>
@@ -71,9 +70,11 @@ function addcar() {
         />
         <button
           className="sub_btn"
-
           onClick={() => {
-            addcar();
+            addcar().then(() => {
+              alert("Car Added");
+              router.push("/peershare");
+            });
           }}
         >
           Submit

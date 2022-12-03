@@ -1,14 +1,38 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/Confirm.module.css";
 import { useRouter } from "next/router";
 import { Navbar } from "../../components";
-import { confirmData, vehicleData } from "../../data";
+import { confirmData } from "../../data";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../utils/firebase";
+
 function Confirm() {
   const router = useRouter();
+  const [car, setCar] = useState(null);
   const { id } = router.query;
-  const data = vehicleData[id - 1];
-  console.log(data);
+  async function getCar(item) {
+    try {
+      const docRef = doc(db, "peercars", item);
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        console.log(docSnap.data());
+        setCar(docSnap.data());
+      } else {
+        console.log("Document does not exist");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  useEffect(() => {
+    getCar(id);
+  }, [id]);
+  console.log(car);
+
+  if (!car) {
+    return <h1>Loading</h1>;
+  }
   return (
     <>
       <Navbar />
@@ -16,16 +40,21 @@ function Confirm() {
         <div className={styles.left_section}>
           <div className={styles.top_section}>
             <div className={styles.top_section_left}>
-              <h1 style={{ color: "rgb(54, 156, 151)" }}>{data?.name}</h1>
-              <Image src={data?.image} width={300} alt="" />
+              <h1 style={{ color: "rgb(54, 156, 151)" }}>{car?.name}</h1>
+              <img
+                src={car?.image}
+                width={300}
+                alt=""
+                style={{ borderRadius: "20px" }}
+              />
               <div>
-                Fuel Type : <b>{data?.fuel}</b>
+                Fuel Type : <b>{car?.fuel}</b>
               </div>
               <div>
-                Gear Transmission : <b>{data?.gear}</b>
+                Gear Transmission : <b>{car?.gear}</b>
               </div>
               <div>
-                No: of Seats : <b>{data?.seats}</b>
+                No: of Seats : <b>{car?.seats}</b>
               </div>
             </div>
             <div className={styles.top_section_right}>
@@ -63,7 +92,7 @@ function Confirm() {
             <div className={styles.bottom_table}>
               <div className={styles.card_1}>
                 <h3 className={styles.table_head}>Base Fare</h3>
-                <div className={styles.table_data}>{data?.price}/-</div>
+                <div className={styles.table_data}>{car?.price}/-</div>
               </div>
               <div className={styles.card_1}>
                 <h3 className={styles.table_head}>
