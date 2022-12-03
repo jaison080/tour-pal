@@ -1,0 +1,9 @@
+.input {
+    display: block;
+    margin: 1rem;
+    padding: .8rem;
+    width: 30%;
+    border-radius: .8rem;
+    border: none;
+    outline: none;
+}
