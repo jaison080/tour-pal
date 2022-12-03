@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 function Profile() {
   const [signedInUser, setSignedInUser] = useState();
   const auth = getAuth(app);
-  const router=useRouter();
+  const router = useRouter();
   onAuthStateChanged(auth, (user) => {
     if (user) {
       const uid = user.uid;
@@ -44,9 +44,13 @@ function Profile() {
             <h1>{signedInUser?.displayName}</h1>
             <h3>{signedInUser?.email}</h3>
           </div>
-          <div className={styles.profile__logout} onClick={()=>{signOutOfGoogle();
-          router.push('/')
-          }}>
+          <div
+            className={styles.profile__logout}
+            onClick={() => {
+              signOutOfGoogle();
+              router.push("/");
+            }}
+          >
             Logout
           </div>
 
