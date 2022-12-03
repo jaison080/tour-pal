@@ -58,7 +58,7 @@ function Profile() {
             <div
               className={styles.profile__logout}
               onClick={() => {
-                router.push("/");
+                router.push("/addcar");
               }}
             >
               Add Car
