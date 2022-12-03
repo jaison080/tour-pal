@@ -1,13 +1,15 @@
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import React, { useState } from "react";
 import { Navbar } from "../components";
 import app from "../utils/firebase";
 import styles from "../styles/Profile.module.css";
 import Image from "next/image";
 import { bookingData } from "../data";
+import { useRouter } from "next/router";
 function Profile() {
   const [signedInUser, setSignedInUser] = useState();
   const auth = getAuth(app);
+  const router=useRouter();
   onAuthStateChanged(auth, (user) => {
     if (user) {
       const uid = user.uid;
@@ -16,6 +18,14 @@ function Profile() {
     } else {
     }
   });
+  async function signOutOfGoogle() {
+    signOut(auth)
+      .then(() => {
+        router.push("/");
+        window.location.reload();
+      })
+      .catch((error) => {});
+  }
   return (
     <>
       <Navbar />
@@ -34,8 +44,10 @@ function Profile() {
             <h1>{signedInUser?.displayName}</h1>
             <h3>{signedInUser?.email}</h3>
           </div>
-          <div className={styles.profile__logout}>
-            <div>Logout</div>
+          <div className={styles.profile__logout} onClick={()=>{signOutOfGoogle();
+          router.push('/')
+          }}>
+            Logout
           </div>
 
           <div className={styles.right_section}>
