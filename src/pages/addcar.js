@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import CustomTitle from "../utils/customTitle";
 import style from "../styles/addcar.module.css";
 import { db } from "../utils/firebase";
+import { Navbar } from "../components";
 function addcar() {
   const [name, setName] = useState("");
   const router = useRouter();
@@ -29,6 +30,7 @@ function addcar() {
       <Navbar />
       <CustomTitle title="Confirm" />
       <div className={style.maincontainer}>
+        <h1>Add Car</h1>
         <div className={style.container}>
           <input
             type="text"

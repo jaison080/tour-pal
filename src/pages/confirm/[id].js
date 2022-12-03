@@ -1,4 +1,4 @@
-import CustomTitle from "../utils/customTitle";
+import CustomTitle from "../../utils/CustomTitle";
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/Confirm.module.css";
 import { useRouter } from "next/router";
