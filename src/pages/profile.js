@@ -44,16 +44,26 @@ function Profile() {
             <h1>{signedInUser?.displayName}</h1>
             <h3>{signedInUser?.email}</h3>
           </div>
-          <div
-            className={styles.profile__logout}
-            onClick={() => {
-              signOutOfGoogle();
-              router.push("/");
-            }}
-          >
-            Logout
+          <div className={styles.buttons}>
+            <div
+              className={styles.profile__logout}
+              onClick={() => {
+                signOutOfGoogle();
+                router.push("/");
+              }}
+            >
+              Logout
+            </div>
+            <br />
+            <div
+              className={styles.profile__logout}
+              onClick={() => {
+                router.push("/");
+              }}
+            >
+              Add Car
+            </div>
           </div>
-
           <div className={styles.right_section}>
             <div className={styles.bottom_section}>
               <h1 className={styles.header}>My Bookings</h1>

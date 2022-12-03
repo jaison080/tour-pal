@@ -83,3 +83,9 @@
   border-radius: 20px;
   padding: 1rem;
 }
+.buttons
+{
+  display: flex;
+  flex-direction: row;
+  column-gap: 2rem;
+}
